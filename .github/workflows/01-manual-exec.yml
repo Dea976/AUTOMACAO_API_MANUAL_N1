@@ -7,7 +7,7 @@ name: 'Execução Manual'
   # gatilho de exec manual = workflow_dispatch 
 
 on:
-  workflow_dispatch:    
+ workflow_dispatch:    
 
 jobs:  
   # descrição do job
@@ -17,9 +17,8 @@ jobs:
     runs-on: ['ubuntu-latest']
 
     # passo a passo das acoes do job
-    steps:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-      - uses: actions/checkout@v4
-
+    steps: 
+      - uses: actions/checkout@v4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
       # - uses: actions/setup-node@v4
       #   with:
       #     node-version: lts/*
@@ -29,14 +28,14 @@ jobs:
 
       - name: Instalando dependências
         run: yarn   
-     
+
       - name: Instalando Playwright
         run: yarn playwright install  
 
       - name: Testes E2E (end-to-end)
         run: yarn run e2e
 
-     #passed, failed, cancelled
+      #passed, failed, cancelled
       - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
