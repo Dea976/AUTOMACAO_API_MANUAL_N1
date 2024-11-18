@@ -9,17 +9,15 @@ name: 'Execução Manual'
 on:
   workflow_dispatch:    
 
-
 jobs:  
   # descrição do job
   e2e-tests:    
-    
+
     #maquina que o job vai executar
     runs-on: ['ubuntu-latest']
 
     # passo a passo das acoes do job
-    steps:
-  
+    steps:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
       - uses: actions/checkout@v4
 
       # - uses: actions/setup-node@v4
